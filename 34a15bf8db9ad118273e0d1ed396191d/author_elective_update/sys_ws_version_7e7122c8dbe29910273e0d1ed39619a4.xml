@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_version">
+    <sys_ws_version action="DELETE">
+        <active>true</active>
+        <deprecated>false</deprecated>
+        <is_default>true</is_default>
+        <short_description/>
+        <sys_class_name>sys_ws_version</sys_class_name>
+        <sys_created_by>10709703</sys_created_by>
+        <sys_created_on>2022-10-10 10:16:43</sys_created_on>
+        <sys_id>7e7122c8dbe29910273e0d1ed39619a4</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>v1</sys_name>
+        <sys_package display_value="PS Number Generator" source="x_latoi_lti_ps_num">34a15bf8db9ad118273e0d1ed396191d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PS Number Generator">34a15bf8db9ad118273e0d1ed396191d</sys_scope>
+        <sys_update_name>sys_ws_version_7e7122c8dbe29910273e0d1ed39619a4</sys_update_name>
+        <sys_updated_by>10709703</sys_updated_by>
+        <sys_updated_on>2022-10-10 10:16:43</sys_updated_on>
+        <version>1</version>
+        <version_id>v1</version_id>
+        <web_service_definition display_value="PSNumber">d40b9fbcdb9ed118273e0d1ed3961995</web_service_definition>
+    </sys_ws_version>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="PS Number Generator">34a15bf8db9ad118273e0d1ed396191d</application>
+        <file_path/>
+        <instance_id>9d8b4fd8db54e784536ad5b0cf961987</instance_id>
+        <instance_name>ltiintdev</instance_name>
+        <name>sys_ws_version_7e7122c8dbe29910273e0d1ed39619a4</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_version"><sys_ws_version action="INSERT_OR_UPDATE"><active>true</active><deprecated>false</deprecated><is_default>true</is_default><short_description/><sys_class_name>sys_ws_version</sys_class_name><sys_created_by>10709703</sys_created_by><sys_created_on>2022-10-10 10:16:43</sys_created_on><sys_id>7e7122c8dbe29910273e0d1ed39619a4</sys_id><sys_mod_count>1</sys_mod_count><sys_name>v1</sys_name><sys_package display_value="PS Number Generator" source="x_latoi_lti_ps_num">34a15bf8db9ad118273e0d1ed396191d</sys_package><sys_policy/><sys_scope display_value="PS Number Generator">34a15bf8db9ad118273e0d1ed396191d</sys_scope><sys_update_name>sys_ws_version_7e7122c8dbe29910273e0d1ed39619a4</sys_update_name><sys_updated_by>10709703</sys_updated_by><sys_updated_on>2022-10-10 10:16:43</sys_updated_on><version>1</version><version_id>v1</version_id><web_service_definition display_value="PSNumber">d40b9fbcdb9ed118273e0d1ed3961995</web_service_definition></sys_ws_version></record_update>]]></payload>
+        <payload_hash>651164988</payload_hash>
+        <record_name>v1</record_name>
+        <reverted_from/>
+        <source>bca15bf8db9ad118273e0d1ed396191f</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>10709703</sys_created_by>
+        <sys_created_on>2022-10-10 10:16:43</sys_created_on>
+        <sys_id>b671aec8dbe29910273e0d1ed3961913</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>183c16595d90000001</sys_recorded_at>
+        <sys_updated_by>10709703</sys_updated_by>
+        <sys_updated_on>2022-10-10 10:16:43</sys_updated_on>
+        <type>Scripted REST Version</type>
+        <update_guid>7e71aec8aee2991000d09c94bf54e212</update_guid>
+        <update_guid_history>7e71aec8aee2991000d09c94bf54e212:651164988,b27122c800e299107a9fbc3949724ba7:-2070296293</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>10709703</sys_created_by>
+        <sys_created_on>2022-10-18 06:47:52</sys_created_on>
+        <sys_db_object display_value="" name="sys_ws_version">sys_ws_version</sys_db_object>
+        <sys_id>24d9c2db833240748efb7f9557ab9210</sys_id>
+        <sys_metadata>7e7122c8dbe29910273e0d1ed39619a4</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>v1</sys_name>
+        <sys_package display_value="PS Number Generator" source="x_latoi_lti_ps_num">34a15bf8db9ad118273e0d1ed396191d</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="PS Number Generator">34a15bf8db9ad118273e0d1ed396191d</sys_scope>
+        <sys_scope_delete display_value="">88de4e9f1e2b43a0b1e9da2f64ab4810</sys_scope_delete>
+        <sys_update_name>sys_ws_version_7e7122c8dbe29910273e0d1ed39619a4</sys_update_name>
+        <sys_update_version display_value="sys_ws_version_7e7122c8dbe29910273e0d1ed39619a4">b671aec8dbe29910273e0d1ed3961913</sys_update_version>
+        <sys_updated_by>10709703</sys_updated_by>
+        <sys_updated_on>2022-10-18 06:47:52</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

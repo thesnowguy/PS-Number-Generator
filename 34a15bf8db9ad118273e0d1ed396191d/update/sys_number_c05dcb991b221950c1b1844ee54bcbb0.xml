@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_number">
+    <sys_number action="INSERT_OR_UPDATE">
+        <category display_value="" name="x_latoi_lti_ps_num_processing_queue">x_latoi_lti_ps_num_processing_queue</category>
+        <maximum_digits>7</maximum_digits>
+        <number>1000</number>
+        <prefix>PS</prefix>
+        <sys_class_name>sys_number</sys_class_name>
+        <sys_created_by>10709703</sys_created_by>
+        <sys_created_on>2022-10-14 10:40:38</sys_created_on>
+        <sys_id>c05dcb991b221950c1b1844ee54bcbb0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>PS</sys_name>
+        <sys_package display_value="PS Number Generator" source="x_latoi_lti_ps_num">34a15bf8db9ad118273e0d1ed396191d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PS Number Generator">34a15bf8db9ad118273e0d1ed396191d</sys_scope>
+        <sys_update_name>sys_number_c05dcb991b221950c1b1844ee54bcbb0</sys_update_name>
+        <sys_updated_by>10709703</sys_updated_by>
+        <sys_updated_on>2022-10-14 10:40:38</sys_updated_on>
+    </sys_number>
+</record_update>

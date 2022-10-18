@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="employee_type" label="Employee Type" language="en" table="x_latoi_lti_ps_num_processing_queue">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>employee_type</element>
+            <help/>
+            <hint/>
+            <label>Employee Type</label>
+            <language>en</language>
+            <name>x_latoi_lti_ps_num_processing_queue</name>
+            <plural>Employee Types</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>10709703</sys_created_by>
+            <sys_created_on>2022-10-14 08:48:34</sys_created_on>
+            <sys_id>3aa3fa55db2e5d50273e0d1ed396197e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Employee Type</sys_name>
+            <sys_package display_value="PS Number Generator" source="x_latoi_lti_ps_num">34a15bf8db9ad118273e0d1ed396191d</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="PS Number Generator">34a15bf8db9ad118273e0d1ed396191d</sys_scope>
+            <sys_update_name>sys_documentation_x_latoi_lti_ps_num_processing_queue_employee_type_en</sys_update_name>
+            <sys_updated_by>10709703</sys_updated_by>
+            <sys_updated_on>2022-10-14 08:48:34</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

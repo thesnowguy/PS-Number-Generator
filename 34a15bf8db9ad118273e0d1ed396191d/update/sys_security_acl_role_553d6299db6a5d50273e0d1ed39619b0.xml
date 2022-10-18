@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>10709703</sys_created_by>
+        <sys_created_on>2022-10-14 08:20:21</sys_created_on>
+        <sys_id>553d6299db6a5d50273e0d1ed39619b0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_latoi_lti_ps_num_processing_queue.x_latoi_lti_ps_num.ps_number_processing_queue_user</sys_name>
+        <sys_package display_value="PS Number Generator" source="x_latoi_lti_ps_num">34a15bf8db9ad118273e0d1ed396191d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PS Number Generator">34a15bf8db9ad118273e0d1ed396191d</sys_scope>
+        <sys_security_acl display_value="x_latoi_lti_ps_num_processing_queue">d93d6299db6a5d50273e0d1ed39619ab</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_553d6299db6a5d50273e0d1ed39619b0</sys_update_name>
+        <sys_updated_by>10709703</sys_updated_by>
+        <sys_updated_on>2022-10-14 08:20:21</sys_updated_on>
+        <sys_user_role display_value="x_latoi_lti_ps_num.ps_number_processing_queue_user" name="x_latoi_lti_ps_num.ps_number_processing_queue_user">593d2e19db6a5d50273e0d1ed396194e</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+</record_update>

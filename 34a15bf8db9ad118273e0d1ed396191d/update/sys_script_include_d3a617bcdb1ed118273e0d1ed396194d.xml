@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_latoi_lti_ps_num.PSNumberUtils</api_name>
+        <caller_access>1</caller_access>
+        <client_callable>false</client_callable>
+        <description>This is a utility script for PS Number generation logic for LTI</description>
+        <name>PSNumberUtils</name>
+        <script><![CDATA[var PSNumberUtils = Class.create();
+PSNumberUtils.prototype = {
+	initialize: function() {
+		var classMap = gs.getProperty('x_latoi_lti_ps_num.Employee_Class_Map');
+		this.eClassMap = JSON.parse(classMap);
+	},
+
+	/**
+	* Description: getEmployeeClass returns just the employee class for an employee type.
+	* Parameters {String}: empType is the employee type.
+	* Returns: the employee class based on the employee type.
+	*/
+
+	getEmployeeClass : function(empType){
+		return this.eClassMap[empType];
+	},
+
+
+	/**	
+     * Description: getPSNumber is called to generate a PS Number for a specific class and an employee type combination.
+     * Returns {obj}: an object with PS Number properties like ps number, employee class, employee type, operation status. 
+     */
+
+	getPSNumber: function(empClass, employeeType) {
+		var nextPS = this._getNextAvailablePS(empClass, employeeType);
+		return JSON.stringify(nextPS);
+	},
+
+	/**
+     * Description: _getNextAvailablePS is a private method glides the employee class map table to check for the map and the next available ps.
+     * Returns {obj}: an object with PS Number properties like ps number, employee class, employee type, operation status. 
+     */
+
+	_getNextAvailablePS: function(eClass, eType) {
+		try {
+			var response = {};
+			var lastGeneratedPS, step, endSeed;
+			var targetTable = 'x_latoi_lti_ps_num_employee_id';
+
+			var grXLLPNEI = new GlideRecord(targetTable);
+			grXLLPNEI.addQuery('employee_class', eClass);
+			grXLLPNEI.addEncodedQuery('supported_employee_typeLIKE' + eType);
+			grXLLPNEI.addActiveQuery();
+			grXLLPNEI.query();
+			if (grXLLPNEI.next()) {
+				step = parseInt(grXLLPNEI.getValue('step'));
+				lastGeneratedPS = parseInt(grXLLPNEI.getValue('counter'));
+				endSeed = parseInt(grXLLPNEI.getValue('end_seed'));
+				var nextLogicalPS = lastGeneratedPS + step;
+
+				if (nextLogicalPS <= endSeed) {
+					if (nextLogicalPS == endSeed) {
+						grXLLPNEI.setValue('active', false);
+					}
+					grXLLPNEI.setValue('counter', nextLogicalPS);
+					grXLLPNEI.update();
+					response.code = 200;
+					response.body = 'Successfully created PS Number';
+					response.eType = this.eType;
+					response.psnumber = nextLogicalPS.toString();
+					return response;
+
+				} else {
+					grXLLPNEI.setValue('active', false);
+					grXLLPNEI.update();
+					response.code = 500;
+					response.body = 'PS Limit reached for this employee type';
+					response.message = 'Error';
+					return response;
+				}
+			} else {
+				response.code = 500;
+				response.body = 'Invalid Employee Type OR PS Limit reached for this employee type';
+				response.message = 'Error';
+				return response;
+			}
+		} catch (ex) {
+			return ex;
+		}
+	},
+
+	type: 'PSNumberUtils'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>10709703</sys_created_by>
+        <sys_created_on>2022-09-30 11:59:53</sys_created_on>
+        <sys_id>d3a617bcdb1ed118273e0d1ed396194d</sys_id>
+        <sys_mod_count>124</sys_mod_count>
+        <sys_name>PSNumberUtils</sys_name>
+        <sys_package display_value="PS Number Generator" source="x_latoi_lti_ps_num">34a15bf8db9ad118273e0d1ed396191d</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="PS Number Generator">34a15bf8db9ad118273e0d1ed396191d</sys_scope>
+        <sys_update_name>sys_script_include_d3a617bcdb1ed118273e0d1ed396194d</sys_update_name>
+        <sys_updated_by>10709703</sys_updated_by>
+        <sys_updated_on>2022-10-17 11:53:24</sys_updated_on>
+    </sys_script_include>
+</record_update>

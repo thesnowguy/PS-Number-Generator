@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_transform_script">
+    <sys_transform_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <map display_value="Request Queue Transform Map">5a3376d1db2e5d50273e0d1ed3961984</map>
+        <order>100</order>
+        <script><![CDATA[(function runTransformScript(source, map, log, target /*undefined onStart*/ ) {
+	
+	
+	var TABLENAME = 'x_latoi_lti_ps_num_processing_queue';
+	var psUtil = new PSNumberUtils();
+	var queueGR = new GlideRecord(TABLENAME);
+	queueGR.addEncodedQuery('ps_numberISEMPTY');
+	queueGR.query();
+	while(queueGR.next()){
+		queueGR.ps_number = psUtil.getPSNumber(queueGR.employee_class, queueGR.employee_type);
+		queueGR.update();
+	}
+
+
+
+})(source, map, log, target);]]></script>
+        <sys_class_name>sys_transform_script</sys_class_name>
+        <sys_created_by>10709703</sys_created_by>
+        <sys_created_on>2022-10-14 09:19:06</sys_created_on>
+        <sys_id>ace6b6dddb6e5d50273e0d1ed3961932</sys_id>
+        <sys_mod_count>22</sys_mod_count>
+        <sys_name>onComplete</sys_name>
+        <sys_package display_value="PS Number Generator" source="x_latoi_lti_ps_num">34a15bf8db9ad118273e0d1ed396191d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PS Number Generator">34a15bf8db9ad118273e0d1ed396191d</sys_scope>
+        <sys_update_name>sys_transform_script_ace6b6dddb6e5d50273e0d1ed3961932</sys_update_name>
+        <sys_updated_by>10709703</sys_updated_by>
+        <sys_updated_on>2022-10-18 12:23:18</sys_updated_on>
+        <when>onComplete</when>
+    </sys_transform_script>
+</record_update>

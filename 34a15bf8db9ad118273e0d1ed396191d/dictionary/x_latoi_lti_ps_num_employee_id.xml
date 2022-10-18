@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Employee Class Map" max_length="40" name="x_latoi_lti_ps_num_employee_id" sizeclass="3" type="collection">
+        <element label="Active" max_length="40" name="active" type="boolean"/>
+        <element label="Last Generated PS" max_length="40" name="counter" read_only="true" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Employee Class" mandatory="true" max_length="40" name="employee_class" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Class A" value="class_a"/>
+                <element inactive_on_update="false" label="Class B" value="class_b"/>
+                <element inactive_on_update="false" label="Class C" value="class_c"/>
+            </choice>
+        </element>
+        <element label="End Seed" max_length="40" name="end_seed" type="integer"/>
+        <element label="Start Seed" max_length="40" name="start_seed" type="integer"/>
+        <element default="1" label="Step" max_length="40" name="step" type="integer"/>
+        <element label="Supported Employee Type" max_length="40" name="supported_employee_type" type="glide_list"/>
+    </element>
+</database>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="sys_import_set_row" label="PS Number Request Queue" max_length="40" name="x_latoi_lti_ps_num_request_queue" sizeclass="1645" type="collection">
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=employee_type" label="Employee Type" max_length="40" name="employee_type" type="string"/>
+    </element>
+</database>

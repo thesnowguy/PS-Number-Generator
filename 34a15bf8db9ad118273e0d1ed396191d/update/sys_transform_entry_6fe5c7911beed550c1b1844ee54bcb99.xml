@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_transform_entry">
+    <sys_transform_entry action="INSERT_OR_UPDATE">
+        <choice_action>create</choice_action>
+        <coalesce>false</coalesce>
+        <coalesce_case_sensitive>false</coalesce_case_sensitive>
+        <coalesce_empty_fields>false</coalesce_empty_fields>
+        <date_format>yyyy-MM-dd HH:mm:ss</date_format>
+        <map display_value="Request Queue Transform Map">5a3376d1db2e5d50273e0d1ed3961984</map>
+        <reference_value_field/>
+        <source_field>[Script]</source_field>
+        <source_script><![CDATA[answer = (function transformEntry(source) {
+	var classMap = gs.getProperty('x_latoi_lti_ps_num.Employee_Class_Map');
+	var eClassMap = JSON.parse(classMap);
+	return eClassMap[source.employee_type];
+
+})(source);]]></source_script>
+        <source_table>x_latoi_lti_ps_num_request_queue</source_table>
+        <sys_class_name>sys_transform_entry</sys_class_name>
+        <sys_created_by>10709703</sys_created_by>
+        <sys_created_on>2022-10-14 10:08:22</sys_created_on>
+        <sys_id>6fe5c7911beed550c1b1844ee54bcb99</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>[Script]</sys_name>
+        <sys_package display_value="PS Number Generator" source="x_latoi_lti_ps_num">34a15bf8db9ad118273e0d1ed396191d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PS Number Generator">34a15bf8db9ad118273e0d1ed396191d</sys_scope>
+        <sys_update_name>sys_transform_entry_6fe5c7911beed550c1b1844ee54bcb99</sys_update_name>
+        <sys_updated_by>10709703</sys_updated_by>
+        <sys_updated_on>2022-10-18 11:42:04</sys_updated_on>
+        <target_field>employee_class</target_field>
+        <target_table>x_latoi_lti_ps_num_processing_queue</target_table>
+        <use_source_script>true</use_source_script>
+    </sys_transform_entry>
+</record_update>

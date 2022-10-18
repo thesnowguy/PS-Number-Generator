@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="employee_class" table="x_latoi_lti_ps_num_employee_id" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>employee_class</element>
+            <name>x_latoi_lti_ps_num_employee_id</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>10709703</sys_created_by>
+            <sys_created_on>2022-09-30 11:33:33</sys_created_on>
+            <sys_id>f223d3b4dbdad118273e0d1ed39619ed</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>employee_class</sys_name>
+            <sys_package display_value="PS Number Generator" source="x_latoi_lti_ps_num">34a15bf8db9ad118273e0d1ed396191d</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="PS Number Generator">34a15bf8db9ad118273e0d1ed396191d</sys_scope>
+            <sys_update_name>sys_choice_x_latoi_lti_ps_num_employee_id_employee_class</sys_update_name>
+            <sys_updated_by>10709703</sys_updated_by>
+            <sys_updated_on>2022-09-30 11:33:33</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>employee_class</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Class A</label>
+            <language>en</language>
+            <name>x_latoi_lti_ps_num_employee_id</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>10709703</sys_created_by>
+            <sys_created_on>2022-09-30 11:33:33</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c0131774dbdad118273e0d1ed39619d3</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>10709703</sys_updated_by>
+            <sys_updated_on>2022-10-10 10:51:45</sys_updated_on>
+            <value>class_a</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>employee_class</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Class B</label>
+            <language>en</language>
+            <name>x_latoi_lti_ps_num_employee_id</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>10709703</sys_created_by>
+            <sys_created_on>2022-09-30 11:33:50</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b6339fb4dbdad118273e0d1ed3961969</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>10709703</sys_updated_by>
+            <sys_updated_on>2022-10-10 10:51:50</sys_updated_on>
+            <value>class_b</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>employee_class</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Class C</label>
+            <language>en</language>
+            <name>x_latoi_lti_ps_num_employee_id</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>10709703</sys_created_by>
+            <sys_created_on>2022-09-30 11:33:59</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>494393b4dbdad118273e0d1ed39619fa</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>10709703</sys_updated_by>
+            <sys_updated_on>2022-10-10 10:51:54</sys_updated_on>
+            <value>class_c</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

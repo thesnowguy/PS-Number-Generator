@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="DELETE">
+        <active>true</active>
+        <application display_value="System Web Services">18f23e670a0a0b2400c55b122be52373</application>
+        <assessment/>
+        <content_page/>
+        <device_type/>
+        <filter/>
+        <hint>User customized web service</hint>
+        <homepage/>
+        <image>images/icons/web_services_mapped.gifx</image>
+        <link_type>DIRECT</link_type>
+        <map_page/>
+        <mobile_title>PS Number</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name/>
+        <order>1050</order>
+        <override_menu_roles>false</override_menu_roles>
+        <query>v_ws_editor.do?sysparm_query=name=x_latoi_lti_generate_ps_number</query>
+        <report/>
+        <roles/>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>10709703</sys_created_by>
+        <sys_created_on>2022-10-14 08:10:02</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>dedae21ddb2a5d50273e0d1ed396193c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>PS Number</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="PS Number Generator" source="x_latoi_lti_ps_num">34a15bf8db9ad118273e0d1ed396191d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PS Number Generator">34a15bf8db9ad118273e0d1ed396191d</sys_scope>
+        <sys_update_name>sys_app_module_dedae21ddb2a5d50273e0d1ed396193c</sys_update_name>
+        <sys_updated_by>10709703</sys_updated_by>
+        <sys_updated_on>2022-10-14 08:10:02</sys_updated_on>
+        <timeline_page/>
+        <title>PS Number</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="PS Number Generator">34a15bf8db9ad118273e0d1ed396191d</application>
+        <file_path/>
+        <instance_id>9d8b4fd8db54e784536ad5b0cf961987</instance_id>
+        <instance_name>ltiintdev</instance_name>
+        <name>sys_app_module_dedae21ddb2a5d50273e0d1ed396193c</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="System Web Services">18f23e670a0a0b2400c55b122be52373</application><assessment/><content_page/><device_type/><filter/><hint>User customized web service</hint><homepage/><image>images/icons/web_services_mapped.gifx</image><link_type>DIRECT</link_type><map_page/><mobile_title>PS Number</mobile_title><mobile_view_name>Mobile</mobile_view_name><name/><order>1050</order><override_menu_roles>false</override_menu_roles><query>v_ws_editor.do?sysparm_query=name=x_latoi_lti_generate_ps_number</query><report/><roles/><sys_class_name>sys_app_module</sys_class_name><sys_created_by>10709703</sys_created_by><sys_created_on>2022-10-14 08:10:02</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>dedae21ddb2a5d50273e0d1ed396193c</sys_id><sys_mod_count>0</sys_mod_count><sys_name>PS Number</sys_name><sys_overrides/><sys_package display_value="PS Number Generator" source="x_latoi_lti_ps_num">34a15bf8db9ad118273e0d1ed396191d</sys_package><sys_policy/><sys_scope display_value="PS Number Generator">34a15bf8db9ad118273e0d1ed396191d</sys_scope><sys_update_name>sys_app_module_dedae21ddb2a5d50273e0d1ed396193c</sys_update_name><sys_updated_by>10709703</sys_updated_by><sys_updated_on>2022-10-14 08:10:02</sys_updated_on><timeline_page/><title>PS Number</title><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+        <payload_hash>1869468688</payload_hash>
+        <record_name>PS Number</record_name>
+        <reverted_from/>
+        <source>bca15bf8db9ad118273e0d1ed396191f</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>10709703</sys_created_by>
+        <sys_created_on>2022-10-14 08:10:03</sys_created_on>
+        <sys_id>9adae21ddb2a5d50273e0d1ed396193f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>183d58b0bbf0000001</sys_recorded_at>
+        <sys_updated_by>10709703</sys_updated_by>
+        <sys_updated_on>2022-10-14 08:10:03</sys_updated_on>
+        <type>Module</type>
+        <update_guid>92dae21daa2a5d503c1977565db9323f</update_guid>
+        <update_guid_history>92dae21daa2a5d503c1977565db9323f:1869468688</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Record deleted 14-10-2022 13:44:55">75fbe6d1db6a5d50273e0d1ed39619d9</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>10709703</sys_created_by>
+        <sys_created_on>2022-10-14 08:14:55</sys_created_on>
+        <sys_db_object display_value="" name="sys_app_module">sys_app_module</sys_db_object>
+        <sys_id>49f7641bb06c4f639e546758d1b32b71</sys_id>
+        <sys_metadata>dedae21ddb2a5d50273e0d1ed396193c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>PS Number</sys_name>
+        <sys_package display_value="PS Number Generator" source="x_latoi_lti_ps_num">34a15bf8db9ad118273e0d1ed396191d</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="PS Number Generator">34a15bf8db9ad118273e0d1ed396191d</sys_scope>
+        <sys_scope_delete display_value="">88de4e9f1e2b43a0b1e9da2f64ab4810</sys_scope_delete>
+        <sys_update_name>sys_app_module_dedae21ddb2a5d50273e0d1ed396193c</sys_update_name>
+        <sys_update_version display_value="sys_app_module_dedae21ddb2a5d50273e0d1ed396193c">9adae21ddb2a5d50273e0d1ed396193f</sys_update_version>
+        <sys_updated_by>10709703</sys_updated_by>
+        <sys_updated_on>2022-10-14 08:14:55</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

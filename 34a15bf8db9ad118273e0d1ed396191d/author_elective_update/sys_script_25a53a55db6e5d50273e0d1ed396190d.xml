@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="DELETE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>false</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_latoi_lti_ps_num_processing_queue</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_latoi_lti_ps_num_processing_queue">ps_numberVALCHANGES^ps_numberISNOTEMPTY^EQ<item endquery="false" field="ps_number" goto="false" newquery="false" operator="VALCHANGES" or="false" value=""/>
+            <item endquery="false" field="ps_number" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Generate PS Number</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	var gr = new GlideRecord("x_latoi_lti_ps_num_request_queue");
+gr.addQuery("sys_target_sys_id", current.sys_id);
+gr.query();
+if (gr.next()) {
+  gr.ps_number = current.ps_number;
+	gr.update();
+}
+
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>10709703</sys_created_by>
+        <sys_created_on>2022-10-14 08:58:32</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>25a53a55db6e5d50273e0d1ed396190d</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Generate PS Number</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="PS Number Generator" source="x_latoi_lti_ps_num">34a15bf8db9ad118273e0d1ed396191d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PS Number Generator">34a15bf8db9ad118273e0d1ed396191d</sys_scope>
+        <sys_update_name>sys_script_25a53a55db6e5d50273e0d1ed396190d</sys_update_name>
+        <sys_updated_by>10709703</sys_updated_by>
+        <sys_updated_on>2022-10-14 09:44:00</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="DELETE" query="documentkey=25a53a55db6e5d50273e0d1ed396190d"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="PS Number Generator">34a15bf8db9ad118273e0d1ed396191d</application>
+        <file_path/>
+        <instance_id>9d8b4fd8db54e784536ad5b0cf961987</instance_id>
+        <instance_name>ltiintdev</instance_name>
+        <name>sys_script_25a53a55db6e5d50273e0d1ed396190d</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script"&gt;&lt;sys_script action="INSERT_OR_UPDATE"&gt;&lt;abort_action&gt;false&lt;/abort_action&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;action_delete&gt;false&lt;/action_delete&gt;&lt;action_insert&gt;false&lt;/action_insert&gt;&lt;action_query&gt;false&lt;/action_query&gt;&lt;action_update&gt;true&lt;/action_update&gt;&lt;active&gt;false&lt;/active&gt;&lt;add_message&gt;false&lt;/add_message&gt;&lt;advanced&gt;true&lt;/advanced&gt;&lt;change_fields&gt;false&lt;/change_fields&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;collection&gt;x_latoi_lti_ps_num_processing_queue&lt;/collection&gt;&lt;condition/&gt;&lt;description/&gt;&lt;execute_function&gt;false&lt;/execute_function&gt;&lt;filter_condition table="x_latoi_lti_ps_num_processing_queue"&gt;ps_numberVALCHANGES^ps_numberISNOTEMPTY^EQ&lt;item endquery="false" field="ps_number" goto="false" newquery="false" operator="VALCHANGES" or="false" value=""/&gt;&lt;item endquery="false" field="ps_number" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/&gt;&lt;item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/&gt;&lt;/filter_condition&gt;&lt;is_rest&gt;false&lt;/is_rest&gt;&lt;message/&gt;&lt;name&gt;Generate PS Number&lt;/name&gt;&lt;order&gt;100&lt;/order&gt;&lt;priority&gt;100&lt;/priority&gt;&lt;rest_method/&gt;&lt;rest_method_text/&gt;&lt;rest_service/&gt;&lt;rest_service_text/&gt;&lt;rest_variables/&gt;&lt;role_conditions/&gt;&lt;script&gt;&lt;![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	var gr = new GlideRecord("x_latoi_lti_ps_num_request_queue");
+gr.addQuery("sys_target_sys_id", current.sys_id);
+gr.query();
+if (gr.next()) {
+  gr.ps_number = current.ps_number;
+	gr.update();
+}
+
+
+})(current, previous);]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;10709703&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-10-14 08:58:32&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;25a53a55db6e5d50273e0d1ed396190d&lt;/sys_id&gt;&lt;sys_mod_count&gt;5&lt;/sys_mod_count&gt;&lt;sys_name&gt;Generate PS Number&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="PS Number Generator" source="x_latoi_lti_ps_num"&gt;34a15bf8db9ad118273e0d1ed396191d&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="PS Number Generator"&gt;34a15bf8db9ad118273e0d1ed396191d&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_25a53a55db6e5d50273e0d1ed396190d&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;10709703&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-10-14 09:44:00&lt;/sys_updated_on&gt;&lt;template/&gt;&lt;when&gt;after&lt;/when&gt;&lt;/sys_script&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=25a53a55db6e5d50273e0d1ed396190d"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>113857588</payload_hash>
+        <record_name>Generate PS Number</record_name>
+        <reverted_from/>
+        <source>bca15bf8db9ad118273e0d1ed396191f</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>10709703</sys_created_by>
+        <sys_created_on>2022-10-14 09:44:00</sys_created_on>
+        <sys_id>e650c799db629d50273e0d1ed396197f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>183d5e111530000001</sys_recorded_at>
+        <sys_updated_by>10709703</sys_updated_by>
+        <sys_updated_on>2022-10-14 09:44:00</sys_updated_on>
+        <type>Business Rule</type>
+        <update_guid>ea50c799a6629d507274d346f5f4317e</update_guid>
+        <update_guid_history>ea50c799a6629d507274d346f5f4317e:113857588,985ff6d10a629d504efbebd8a25a3d69:-400773555,054f36d151629d50ac2e5ef0b4427297:113857588,7e1abe51a2ee5d5025cc5b65ad82d8e6:564221429,b88676d9d56e5d5045ed7b66aefce62a:-1358381850,e0f576954d6e5d504cfef03752e5f417:-903931822</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>10709703</sys_created_by>
+        <sys_created_on>2022-10-14 10:09:24</sys_created_on>
+        <sys_db_object display_value="" name="sys_script">sys_script</sys_db_object>
+        <sys_id>0bb453236023488a80c08c72353699e4</sys_id>
+        <sys_metadata>25a53a55db6e5d50273e0d1ed396190d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Generate PS Number</sys_name>
+        <sys_package display_value="PS Number Generator" source="x_latoi_lti_ps_num">34a15bf8db9ad118273e0d1ed396191d</sys_package>
+        <sys_parent display_value="PS Number Processing Queue">85ade25ddb6a5d50273e0d1ed396192d</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="PS Number Generator">34a15bf8db9ad118273e0d1ed396191d</sys_scope>
+        <sys_scope_delete display_value="">88de4e9f1e2b43a0b1e9da2f64ab4810</sys_scope_delete>
+        <sys_update_name>sys_script_25a53a55db6e5d50273e0d1ed396190d</sys_update_name>
+        <sys_update_version display_value="sys_script_25a53a55db6e5d50273e0d1ed396190d">e650c799db629d50273e0d1ed396197f</sys_update_version>
+        <sys_updated_by>10709703</sys_updated_by>
+        <sys_updated_on>2022-10-14 10:09:24</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="DELETE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri>/api/x_latoi_lti_ps_num/psnumber/generate/{employeeType}</default_operation_uri>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>GET</http_method>
+        <name>GeneratePSNumber</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+
+	var pathParams = request.pathParams; 
+	// 	get the employee type from the path parameters
+	var eType = pathParams.employeeType; 
+
+	// Create a new instance of the PSNumberUtils Script Include
+	var obj = {};
+	var requestRecord = new PSNumberUtils().createRequestQueueRecord(eType);
+	var gr = new GlideRecord("x_latoi_lti_ps_num_request_queue");
+	if(gr.get(requestRecord)){
+		obj = JSON.parse(gr.sys_target_sys_id.ps_number);
+	}
+
+	// return the response
+	response.setBody(obj);
+
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_latoi_lti_ps_num/v1/psnumber/generate/{employeeType}</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/generate/{employeeType}</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>false</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>10709703</sys_created_by>
+        <sys_created_on>2022-09-30 12:11:16</sys_created_on>
+        <sys_id>b01b57fcdb9ed118273e0d1ed3961938</sys_id>
+        <sys_mod_count>51</sys_mod_count>
+        <sys_name>GeneratePSNumber</sys_name>
+        <sys_package display_value="PS Number Generator" source="x_latoi_lti_ps_num">34a15bf8db9ad118273e0d1ed396191d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="PS Number Generator">34a15bf8db9ad118273e0d1ed396191d</sys_scope>
+        <sys_update_name>sys_ws_operation_b01b57fcdb9ed118273e0d1ed3961938</sys_update_name>
+        <sys_updated_by>10709703</sys_updated_by>
+        <sys_updated_on>2022-10-14 10:49:53</sys_updated_on>
+        <web_service_definition display_value="PSNumber">d40b9fbcdb9ed118273e0d1ed3961995</web_service_definition>
+        <web_service_version display_value="v1">7e7122c8dbe29910273e0d1ed39619a4</web_service_version>
+    </sys_ws_operation>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="PS Number Generator">34a15bf8db9ad118273e0d1ed396191d</application>
+        <file_path/>
+        <instance_id>9d8b4fd8db54e784536ad5b0cf961987</instance_id>
+        <instance_name>ltiintdev</instance_name>
+        <name>sys_ws_operation_b01b57fcdb9ed118273e0d1ed3961938</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ws_operation"&gt;&lt;sys_ws_operation action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;consumes&gt;application/json,application/xml,text/xml&lt;/consumes&gt;&lt;consumes_customized&gt;false&lt;/consumes_customized&gt;&lt;default_operation_uri&gt;/api/x_latoi_lti_ps_num/psnumber/generate/{employeeType}&lt;/default_operation_uri&gt;&lt;enforce_acl&gt;cf9d01d3e73003009d6247e603f6a990&lt;/enforce_acl&gt;&lt;http_method&gt;GET&lt;/http_method&gt;&lt;name&gt;GeneratePSNumber&lt;/name&gt;&lt;operation_script&gt;&lt;![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+
+	var pathParams = request.pathParams; 
+	// 	get the employee type from the path parameters
+	var eType = pathParams.employeeType; 
+
+	// Create a new instance of the PSNumberUtils Script Include
+	var obj = {};
+	var requestRecord = new PSNumberUtils().createRequestQueueRecord(eType);
+	var gr = new GlideRecord("x_latoi_lti_ps_num_request_queue");
+	if(gr.get(requestRecord)){
+		obj = JSON.parse(gr.sys_target_sys_id.ps_number);
+	}
+
+	// return the response
+	response.setBody(obj);
+
+})(request, response);]]&gt;&lt;/operation_script&gt;&lt;operation_uri&gt;/api/x_latoi_lti_ps_num/v1/psnumber/generate/{employeeType}&lt;/operation_uri&gt;&lt;produces&gt;application/json,application/xml,text/xml&lt;/produces&gt;&lt;produces_customized&gt;false&lt;/produces_customized&gt;&lt;relative_path&gt;/generate/{employeeType}&lt;/relative_path&gt;&lt;request_example/&gt;&lt;requires_acl_authorization&gt;true&lt;/requires_acl_authorization&gt;&lt;requires_authentication&gt;true&lt;/requires_authentication&gt;&lt;requires_snc_internal_role&gt;false&lt;/requires_snc_internal_role&gt;&lt;short_description/&gt;&lt;sys_class_name&gt;sys_ws_operation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;10709703&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-09-30 12:11:16&lt;/sys_created_on&gt;&lt;sys_id&gt;b01b57fcdb9ed118273e0d1ed3961938&lt;/sys_id&gt;&lt;sys_mod_count&gt;51&lt;/sys_mod_count&gt;&lt;sys_name&gt;GeneratePSNumber&lt;/sys_name&gt;&lt;sys_package display_value="PS Number Generator" source="x_latoi_lti_ps_num"&gt;34a15bf8db9ad118273e0d1ed396191d&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="PS Number Generator"&gt;34a15bf8db9ad118273e0d1ed396191d&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ws_operation_b01b57fcdb9ed118273e0d1ed3961938&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;10709703&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-10-14 10:49:53&lt;/sys_updated_on&gt;&lt;web_service_definition display_value="PSNumber"&gt;d40b9fbcdb9ed118273e0d1ed3961995&lt;/web_service_definition&gt;&lt;web_service_version display_value="v1"&gt;7e7122c8dbe29910273e0d1ed39619a4&lt;/web_service_version&gt;&lt;/sys_ws_operation&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1594187371</payload_hash>
+        <record_name>GeneratePSNumber</record_name>
+        <reverted_from/>
+        <source>bca15bf8db9ad118273e0d1ed396191f</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>10709703</sys_created_by>
+        <sys_created_on>2022-10-14 10:49:53</sys_created_on>
+        <sys_id>bb6f4b99dbe29d50273e0d1ed3961936</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>183d61d633a0000001</sys_recorded_at>
+        <sys_updated_by>10709703</sys_updated_by>
+        <sys_updated_on>2022-10-14 10:49:53</sys_updated_on>
+        <type>Scripted REST Resource</type>
+        <update_guid>736f4b99cce29d506e1f5614685c0d36</update_guid>
+        <update_guid_history>736f4b99cce29d506e1f5614685c0d36:1594187371,91fe4f511e621950b71cb00fb33b130e:1502152147,10eec351e562195079376edc370e5999:-291387009,634e479d6422195043adc0b29a3e8721:1594187371,3bdd439d7522195068cd912088494dfe:-1881363761,afadcf1d75221950fe70873e3d024d74:-412202971,040d0f19182219506bdedf4b62547cfe:1594187371,33ac8f19272219502ddfef062c5013b8:-291387009,1d9c4b1979221950d71853d9769d6763:1502152147,898c0b19942219509838551271c20a4e:-1159196963,9b5c431911221950c9d237906175b8ab:1605904009,324c0fd5982219500a0e05067ad081de:-1106789047,df5b4b158a221950551e1cd2833ad3d3:-801272576,c62b87d19222195064b8ded9becc4cca:-970524437,111bcbd148221950c75fe939ead5bfe0:-1765153324,09fa4f9172221950a188053cf801715a:-346736141,b4da83d1462219500585738ea46e9f7e:-1765153324,f89a8791092219504b843190a5da127f:-966160672,625ac351ec22195036d3b5ef3e54c1c1:-1945086248,d23a8311682219505f15b404a88a9f2f:576975604,d9a7c31908eed550cb0822a211ba9bd4:-445457601,20f4879d37aed5507b3498401ec03d0b:2137960754,c7540fd9c7aed550aac420e0b674fcf0:-873259918,bb248bd997aed55039e54b942dd00e5a:1750894034,d073cfd508aed550bd1c2a85df4db145:901084420,8f4dba95e9229d50dfa43a5b28e524ed:1586417270,35ac070cab22d910fd254565e01916a0:-2057902120,2acffe4809ae991009d0292961813203:215012546,0e8fb208e3ae991064e3c8e51e68c46d:-83798718,3c60b2cc16ea99103a6d82fc9ced3eba:-246294514,4f71aec8cae299108449dd58cb9eb419:-313576756,7d6122c84de2991071473a819db8aaa2:-732286254,55ff2b349ed61518e9cf759ce5d50524:-2071800724,7e5cab3825561518302f0a6d86fd805f:-1597544046,905caf3c165615189ee0189c35f475d0:-2101047182,e63ca77c265615188e005bd29e8d08b8:1837878905,eaeba778a8561518fb49448a1eecbc9f:-1299205846,de9bef34a5d211186bcf4de47fe283a7:1842699746,e34b27f0f7d2111882bf23ad365ce268:1629351956,881aaf78dc9211180b7405bc6ed50b14:-9917192,7a13633412921518bfc57ff3bb091cbd:-1285718131,d603abf0c4921518bf08f4227827a40f:251678204,6781ab7842521518c0bb78e2a4bc34f6:808754439,3d7123b49d521518a52479806780417e:839529749,5c71ef385a5215184cb59f5286b994b2:-1293880706,855123b481521518563353a866882776:-1644501036,aac0af34f552151815ea86bd624fcfb7:638862317,9050abbcd2121518ca2cd22665acc108:-1548854846,87bf1f3cc512151832553a19c9cc8864:1354552695,e89f533c0e1215187808338d9091acbd:-2089404546,0a8fd73c7f121518c6ba5f55ad437414:138800857,d36e9bf07a1215186f690cf6985fbfed:-1724116304,029c57747bded118e7fcf1a798d2e10a:1946784769,57cb133457ded11836aa7025f7dc525d:167981146</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>10709703</sys_created_by>
+        <sys_created_on>2022-10-17 11:45:47</sys_created_on>
+        <sys_db_object display_value="" name="sys_ws_operation">sys_ws_operation</sys_db_object>
+        <sys_id>16575c7204884d03aedc3b1c1b4ef149</sys_id>
+        <sys_metadata>b01b57fcdb9ed118273e0d1ed3961938</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>GeneratePSNumber</sys_name>
+        <sys_package display_value="PS Number Generator" source="x_latoi_lti_ps_num">34a15bf8db9ad118273e0d1ed396191d</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="PS Number Generator">34a15bf8db9ad118273e0d1ed396191d</sys_scope>
+        <sys_scope_delete display_value="">88de4e9f1e2b43a0b1e9da2f64ab4810</sys_scope_delete>
+        <sys_update_name>sys_ws_operation_b01b57fcdb9ed118273e0d1ed3961938</sys_update_name>
+        <sys_update_version display_value="sys_ws_operation_b01b57fcdb9ed118273e0d1ed3961938">bb6f4b99dbe29d50273e0d1ed3961936</sys_update_version>
+        <sys_updated_by>10709703</sys_updated_by>
+        <sys_updated_on>2022-10-17 11:45:47</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
